@@ -7,7 +7,7 @@ body {
     height: 250px;
 }
 
-ul li {
+main ul li a{
     list-style-type:none;
 }
 
