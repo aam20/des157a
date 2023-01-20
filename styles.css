@@ -2,22 +2,40 @@ body {
     /*max-width:1200px;
     max-height:750px;*/
    /* max-width:1200px;*/
-    max-width: 40%;
-    font-family:monospace;
+    max-width: 50%;
+    font-family: monospace;
     margin: auto;
-    text-align: center;
+    text-align:center;
     background-color:rgb(240, 255, 240);
 }
 
 main {
     background-color:#E3F6BE; /*old #C0B871*/
     color:#a59c42;
+    padding-top:5%;
+    padding-bottom:5%;
 }
+
+h1 {
+    font-size: 300%;
+}
+
+h2 {
+    font-size: 150%;
+}
+
 ul{
     list-style-type:none; /*it doesn't work*/
+    padding-left:0; /*removes left indent from lists*/
 }
 
 footer{
     background-color:#607E26;
     color: white;
+}
+
+
+header {
+    padding:0;
+    padding-top: 10%;
 }
