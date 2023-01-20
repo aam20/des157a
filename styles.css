@@ -1,9 +1,9 @@
 body {
-    max-width:1200px;
-    max-height:750px;
+    /*max-width:1200px;
+    max-height:750px;*/
     text-align: center;
-    margin: auto;
     font-family:monospace;
+    margin: auto;
     background-color:rgb(240, 255, 240);
 }
 
@@ -14,19 +14,8 @@ main {
 main ul li a{
     list-style-type:none; /*it doesn't work*/
 }
-
 section {
-    text-align: left;
-    padding-left:20px;
-}
-
-h1 {
-    font-size:45px;
-}
-
-h2 {
-    font-size:25px;
-    padding-bottom:0;
+    margin: auto;
 }
 
 footer{
