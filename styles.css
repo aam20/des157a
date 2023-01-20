@@ -1,9 +1,10 @@
 body {
     /*max-width:1200px;
     max-height:750px;*/
-    text-align: center;
+    max-width:1200px;
     font-family:monospace;
     margin: auto;
+    text-align: center;
     background-color:rgb(240, 255, 240);
 }
 
@@ -13,9 +14,6 @@ main {
 }
 ul{
     list-style-type:none; /*it doesn't work*/
-}
-section {
-    margin: auto;
 }
 
 footer{
