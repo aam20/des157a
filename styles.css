@@ -11,7 +11,7 @@ main {
     background-color:#E3F6BE; /*old #C0B871*/
     color:#a59c42;
 }
-main ul li a{
+ul{
     list-style-type:none; /*it doesn't work*/
 }
 section {
