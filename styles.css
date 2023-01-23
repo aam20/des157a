@@ -40,13 +40,10 @@ header {
     background-image: url(images/lookingcat.png);
     background-repeat: no-repeat;
     background-size: contain;
-    position: relative;
-
   }
 
 #window #card:hover #cat1{ /*combined the pattern bgd-image & the cat image in the html*/
     animation: fadeIn 1s forwards; /*fade in*/ 
-    /*i used ease i think & added opacity:0; to remove the cat image initially*/
     position:relative;
   }
 
@@ -54,9 +51,10 @@ header {
 #cat1{
     position: relative;
     bottom: -40px;
-    right: -35px;
+    right: -30px;
     width:25%;
     animation: fadeOut 1s forwards; /*fadeo out*/
+    opacity:0;
 }
 
 
@@ -106,8 +104,11 @@ ul{
 
 section {
     padding-bottom: 5%;
-    max-width:90%;
+    max-width:80%;
     margin: auto;
+    text-align: left; /*aligned text & added padding*/
+    padding-left: 5%;
+    padding-right: 5%
 }
 
 /*footer*/
@@ -121,3 +122,48 @@ footer{
     margin-top: 5%;
 }
 
+
+@media only screen and (min-width: 600px)
+{
+    main {
+        display:flex;
+        flex:100%;
+    }
+
+    .column{
+        flex:1;
+        padding:auto;
+        margin: 0;
+        margin-left:2%;
+    }
+    .column:last-of-type {
+        margin-right:2%;
+    }
+
+    #banner {
+        display: flex;
+    }
+    
+    #banner h1{
+        flex:1;
+    }
+
+    main {
+        padding-bottom:2%;
+    }
+
+    footer {
+        display: flex;
+        padding:0;
+        text-align:center;
+  
+    }
+
+    footer p {
+        flex:1;
+    }
+
+    h1 {
+        text-align:left;
+    }
+}
