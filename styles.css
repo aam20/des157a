@@ -2,7 +2,7 @@ body {
     /*max-width:1200px;
     max-height:750px;*/
    /* max-width:1200px;*/
-    max-width: 50%;
+    max-width: 70%;
     font-family: monospace;
     margin: auto;
     text-align:center;
@@ -10,17 +10,41 @@ body {
 }
 
 main {
-    background-color:#E3F6BE; /*old #C0B871*/
+    background-color:#C0B871; /*old #C0B871*/
     color:#a59c42;
-    padding-top:5%;
-    padding-bottom:5%;
+    padding: 2%;
 }
+
+img {
+    min-width: 40%;
+    margin:auto;
+}
+
+header {
+    padding:0;
+    margin-top: 4%;
+    background-color: #d0ea9f;
+    color:#607E26;
+}
+
 
 h1 {
-    font-size: 300%;
+    font-size: 350%;
 }
 
-h2 {
+#className { /*id for the des157a*/
+    font-size: 200%;
+    background-color:#607E26;
+    color:#FFFFFF;
+}
+
+/* style for middle area*/
+.column {
+    background-color:#E3F6BE;
+  }
+
+section h2 {
+    color:#607E26;
     font-size: 150%;
 }
 
@@ -29,13 +53,13 @@ ul{
     padding-left:0; /*removes left indent from lists*/
 }
 
+
+/*footer*/
 footer{
     background-color:#607E26;
     color: white;
 }
 
 
-header {
-    padding:0;
-    padding-top: 10%;
-}
+
+
