@@ -2,7 +2,7 @@ body {
     /*max-width:1200px;
     max-height:750px;*/
    /* max-width:1200px;*/
-    max-width: 70%;
+    max-width: 100%;
     font-family: monospace;
     margin: auto;
     text-align:center;
@@ -12,30 +12,78 @@ body {
 main {
     background-color:#C0B871; /*old #C0B871*/
     color:#a59c42;
-    padding: 2%;
-}
-
-img {
-    max-width: 100%;
+    padding-bottom: 4%;
+    padding-top: 2%;
+    max-width: 1100px;
     margin:auto;
 }
 
 header {
-    padding:0;
-    margin-top: 4%;
     background-color: #d0ea9f;
     color:#607E26;
+    max-width: 1200px;
+    margin:auto;
+}
+
+#window{
+    background-image: url('images/window.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+    width: 100%;
+    height:auto;
+    max-width:1220px;
+    
+}
+
+#window #card{
+    background-image: url(images/lookingcat.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+
+  }
+
+#window #card:hover #cat1{ /*combined the pattern bgd-image & the cat image in the html*/
+    animation: fadeIn 1s forwards; /*fade in*/ 
+    /*i used ease i think & added opacity:0; to remove the cat image initially*/
+    position:relative;
+  }
+
+
+#cat1{
+    position: relative;
+    bottom: -40px;
+    right: -35px;
+    width:25%;
+    animation: fadeOut 1s forwards; /*fadeo out*/
 }
 
 
+@keyframes fadeIn { 
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+  }
+ 
+  @keyframes fadeOut {
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+  }
+
+
+
 h1 {
-    font-size: 350%;
+    font-size: 400%;
+    margin:0;
+    padding: 5%;
 }
 
 #className { /*id for the des157a*/
     font-size: 200%;
     background-color:#607E26;
     color:#FFFFFF;
+    margin:0;
+    padding:2%;
 }
 
 /* style for middle area*/
@@ -46,20 +94,30 @@ h1 {
 section h2 {
     color:#607E26;
     font-size: 150%;
+    margin-bottom:0;
+    padding-top:2%;
 }
 
 ul{
-    list-style-type:none; /*it doesn't work*/
-    padding-left:0; /*removes left indent from lists*/
+    list-style-type:none;
+    margin:0;
+    padding:0;
 }
 
+section {
+    padding-bottom: 5%;
+    max-width:90%;
+    margin: auto;
+}
 
 /*footer*/
 footer{
     background-color:#607E26;
     color: white;
+    max-width: 1200px;
+    margin:auto;
+    padding-top: 1%;
+    padding-bottom: 5%;;
+    margin-top: 5%;
 }
-
-
-
 
