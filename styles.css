@@ -106,7 +106,6 @@ ul li a:hover {
 ul li a {
     color:#a59c42;
     font-size:15px;
-    
 }
 
 section {
@@ -129,7 +128,7 @@ footer{
 }
 
 footer a {
-    color:#FFFFFF;
+    color:#C0B871;
 }
 
 @media only screen and (min-width: 800px)
