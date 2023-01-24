@@ -91,6 +91,8 @@ h1:hover {
 /* style for middle area sections & its lists*/
 .column {
     background-color:#E3F6BE;
+    margin-left:5%;
+    margin-right:5%;
   }
 
 section h2 {
