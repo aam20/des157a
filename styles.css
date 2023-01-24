@@ -1,7 +1,4 @@
 body {
-    /*max-width:1200px;
-    max-height:750px;*/
-   /* max-width:1200px;*/
     max-width: 100%;
     font-family: monospace;
     margin: auto;
@@ -18,6 +15,10 @@ main {
     margin:auto;
 }
 
+section.column {
+    padding-bottom:20px;
+}
+
 header {
     background-color: #d0ea9f;
     color:#607E26;
@@ -32,17 +33,15 @@ header {
     position: relative;
     width: 100%;
     height:auto;
-    max-width:1220px;
-    
 }
 
 #window #card{
-    background-image: url(images/lookingcat.png);
+    background-image: url("images/lookingcat.png");
     background-repeat: no-repeat;
     background-size: contain;
   }
 
-#window #card:hover #cat1{ /*combined the pattern bgd-image & the cat image in the html*/
+#window #card:hover #cat1{ 
     animation: fadeIn 1s forwards; /*fade in*/ 
     position:relative;
   }
@@ -53,7 +52,7 @@ header {
     bottom: -40px;
     right: -30px;
     width:25%;
-    animation: fadeOut 1s forwards; /*fadeo out*/
+    animation: fadeOut 1s forwards; /*fade out*/
     opacity:0;
 }
 
@@ -98,12 +97,19 @@ section h2 {
 
 ul{
     list-style-type:none;
-    margin:0;
-    padding:0;
+}
+
+ul li a:hover {
+    color:#607E26;
+}
+
+ul li a {
+    color:#a59c42;
+    font-size:15px;
+    
 }
 
 section {
-    padding-bottom: 5%;
     max-width:80%;
     margin: auto;
     text-align: left; /*aligned text & added padding*/
@@ -111,7 +117,7 @@ section {
     padding-right: 5%
 }
 
-/*footer*/
+
 footer{
     background-color:#607E26;
     color: white;
@@ -119,9 +125,12 @@ footer{
     margin:auto;
     padding-top: 1%;
     padding-bottom: 5%;;
-    margin-top: 5%;
+    margin-top: 2%;
 }
 
+footer a {
+    color:#FFFFFF;
+}
 
 @media only screen and (min-width: 800px)
 {
