@@ -128,7 +128,11 @@ footer{
 }
 
 footer a {
-    color:#C0B871;
+    color:#d0ea9f;
+}
+
+footer a:hover {
+    color:#FFFFFF;
 }
 
 @media only screen and (min-width: 800px)
