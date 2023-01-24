@@ -7,7 +7,7 @@ body {
 }
 
 main {
-    background-color:#C0B871; /*old #C0B871*/
+    background-color:#C0B871;
     color:#a59c42;
     padding-bottom: 4%;
     padding-top: 2%;
@@ -101,9 +101,8 @@ section h2 {
 }
 
 section {
-    max-width:80%;
     margin: auto;
-    text-align: left; /*aligned text & added padding*/
+    text-align: left;
     padding-left: 5%;
     padding-right: 5%
 }
@@ -177,11 +176,11 @@ footer a:hover {
         padding:0;
         text-align:center;
         margin-top:2%;
-  
     }
 
     footer p {
         flex:1;
+        
     }
 
     h1 {
