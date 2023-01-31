@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment 2</title>
+    <style>
+        body {
+            max-width: 80%;
+            margin: auto;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Experiment 2: Guess The Background Color</h1>
+    <h2 id="result"></h2>
+    <p></p>
+    <p></p>
+
+    <script>
+        // program asks users to guess between 2 colors 
+        // it changes the background color to that random color
+        // it writes sentences of what you guessed & if it matches the random color 
+        
+    
+
+        //FUNCTION: randomizes between min & max of the colors array 
+        function randomInt (min,max) {
+            return Math.floor( (max-min+1) * Math.random()) + min;
+         } 
+
+         var colors = ["pink","green"]; 
+         var pickColor = prompt("Am I thinking of pink or green?", "");
+
+
+         //FUNCTION: changes background color & indicates if user input matches random color
+         function backgroundColor (enterColor,random) {
+            //holds random # from colors array 
+            var randomColor= random[randomInt(0,random.length-1)]; 
+            
+            //holds all paragraphs 
+            var allParas = document.querySelectorAll('p');
+
+
+            //ERROR message if user cancels prompt or clicks ok with no text 
+             if (enterColor == null || enterColor ==''){ 
+
+                document.getElementById('result').innerHTML = "ERROR:";
+                document.getElementById('result').style.color = 'red';
+                allParas[0].innerHTML= `Please refresh & guess the color.`;
+
+                 //console
+                 console.log('ERROR: Please refresh & guess the color.')
+            }
+
+            /*******MATCH*******/
+            else if (enterColor.toLowerCase() == randomColor) {
+                document.body.style.backgroundColor = randomColor;//changes background randomly
+
+                document.getElementById('result').innerHTML = "CORRECT:";
+                document.getElementById('result').style.color = "rgb(0, 44, 0)";
+                document.getElementById('result').style.backgroundColor = "white";
+                
+
+                //selects para & changes text 
+                allParas[0].innerHTML= `You guessed the color ${enterColor.toLowerCase()}.`;
+                allParas[1].innerHTML = `It matches the random color ${randomColor}.`;
+
+                //console
+                console.log(`CORRECT: You guessed the color ${enterColor.toLowerCase()}. It matches the random color ${randomColor}.`);
+            }
+
+            /*******NO MATCH*******/ 
+            else {
+                document.body.style.backgroundColor = randomColor;//changes background randomly
+
+                //can use IDs to change the innerHTML
+                document.getElementById('result').innerHTML = "INCORRECT:";
+                document.getElementById('result').style.color = "red";
+                document.getElementById('result').style.backgroundColor = "white";
+
+
+                allParas[0].innerHTML= `You guessed the color ${enterColor.toLowerCase()}.`;
+                allParas[0].style.color= enterColor;
+                
+                allParas[1].innerHTML = `It doesn't match the random color ${randomColor}.`;
+               
+
+                //console
+                console.log(`INCORRECT: You guessed the color ${enterColor.toLowerCase()}. It doesn't match the random color ${randomColor}`);
+            }
+    
+         }
+
+         backgroundColor(pickColor, colors); 
+         //pickColor passes thru enterColor variable 
+         //colors array passes thru random variable 
+    
+    </script>
+</body>
+</html>
