@@ -16,7 +16,7 @@ label {
     padding:20px;
     background-color:#FFF8DE;
     /*max-width: 1200px;*/
-    margin: auto;
+    margin:auto;
     border:solid 2px #421E09;
     margin-top:2%;
 }
@@ -34,7 +34,14 @@ input[type=submit] {
     font-family: 'Griffy', cursive;
     font-size:300%;
     width:100%;
+    /*color:#da5252;*/
+    color:#421E09;
+    background-color:#FFF8DE
+}
 
+input[type=submit]:hover {
+    color:#FFF8DE;
+    background-color:#421E09;
 }
 
 input[type=text] {
@@ -51,7 +58,6 @@ h1 {
 
 
 /********images*******/
-
 .butterfly {
     width: 10%;
     height: 10%;
@@ -71,7 +77,7 @@ h1 {
 .floor {
     position:fixed;
     max-height:fit-content;
-    top:65%;
+    top:60%;
     right:-3%;
     z-index: -2;
 }
@@ -82,6 +88,7 @@ h1 {
     max-height: 20%;
     max-width:50%;
     z-index:-1;
+    margin:auto;
 }
 
 /****footer****/
@@ -115,11 +122,13 @@ footer p {
 
 
 /*********media query*********/
+/*****DESKTOP*****/
 @media only screen and (min-width: 800px)
 {
     
     main {
         display:flex;
+        margin:auto;
     }
 
     main {
@@ -140,6 +149,7 @@ footer p {
     footer p {
         flex:1;
     }
+    
 }
 
 

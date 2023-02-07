@@ -125,6 +125,10 @@ article {
     color:#1E1E1E;    
 }
 
+.links:hover:visited {
+    color:#a59c42;
+}
+
 
 /****footer****/
 footer{
