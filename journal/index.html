@@ -8,18 +8,55 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
     <link href="styles.css" rel="stylesheet">
 </head>
+
 <body>
-    <header>
-        <h1> Annamaria's Learning Journal</h1>
-    </header>
+        
+    <div class="banner">
+        <img class="cat3" src ="../images/lookingcat.png" alt="back of a cat"> 
+        <header>
+            <h1> Annamaria's Learning Journal</h1>
+        </header>
+    </div>
     
-    <main>
+
+    <main> 
+
+         <!--2nd journal entry-->
+        <article class="bttmmarg" >
+            <h2>Best Practices For Modals / Overlays / Dialog</h2>
+            <time class="date" datetime="2023-02-07">February 7th, 2023</time>
+    
+    
+            <div class="container">
+                <p class = "para">
+                    In the article, <a class= "links" href="https://uxplanet.org/best-practices-for-modals-overlays-dialog-windows-c00c66cddd8c">“Best Practices for Modals/Overlays/Dialog Windows”</a> by Naema Baskanderi goes over best practices for modal windows (overlays, dialog windows) which include their usage, anatomy,  mobile use, and accessibility. A big takeaway is to use modals carefully and to not use them to display error, warning, and success messages. Consider using modals to display important information, to ask the user for input, and to display information connected to the parent window (the window under the modal) or to display information not directly related to the parent window. 
+    
+                </p>
+    
+                <p class = "para">
+                    Regarding anatomy, Baskanderi notes to make modal titles descriptive, to make button names understandable, and to give users an escape feature, especially always a keyboard accessible control to close the modal. For sizing and location, I learned to make the size no more than 50% of the screen and to make the location the upper half of the screen, to account for modals moving in mobile view. It’s noted that if you need a scrollbar to consider using a separate parent window/page. Baskanderi states to give users the control to trigger the modal and to bring focus to the modal through a lightbox effect against a dark background, to indicate the user’s inability to interact with the parent window. For mobile use, I understand that modals aren’t good on mobile because the content is difficult to view.  
+    
+                </p>
+    
+                <p class = "para">
+                    For accessibility, Baskanderi recommends including keyboard accessibility in modals. For opening and closing the modal, the element that opens the modal and what closes it should be keyboard accessible.  Also when the modal opens, the keyboard focus has to move to the top and once the focus moves to the dialog, it should stay there until it's closed. 
+    
+                </p>
+            </div>
+    
+           
+
+            
+        </article>
+
+
+        <!--1st journal entry-->
         <article> 
             <h2>Best Practices For Form Design</h2>
             <time class="date" datetime="2023-01-31">January 31st, 2023</time>
 
 
-            <div id="container">
+            <div class="container">
                 <p class = "para">
                     My main takeaways from the article <a class="links"  href="https://uxdesign.cc/best-practices-for-form-design-ff5de6ca8e5f">“Best Practices For Form Design”</a> by Salim Ansari, are to provide clear feedback on what’s required from the user to avoid confusion, to aim to not overwhelm and confuse the user (with word walls and general labels), and design with accessibility in mind. For feedback, it's mentioned to always provide feedback on the amount of steps a form has and the required information. Regarding error feedback, I understand to make it stand out, to be polite with how you deliver errors, and be specific on what the error is and how to fix it. I agree with the article on being specific with error messages because I’ve encountered times when I stop filling forms because I don’t understand the error. 
 
@@ -38,10 +75,10 @@
                 </p>
             </div>
 
-            <div id="pop">
-                <img id="cat1" src ="../images/lookingcat.png" alt="back of a cat"> 
+            <div class="pop">
+                <img class="cat1" src ="../images/lookingcat.png" alt="back of a cat"> 
             </div>
-            <img id="cat2" src ="../images/cat.png" alt="back of a cat"> 
+            <img class="cat2" src ="../images/cat.png" alt="back of a cat"> 
             
         </article>
     </main>   
