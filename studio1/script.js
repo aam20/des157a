@@ -29,9 +29,8 @@
         const text2 = ` Earlier, ${name} was very excited to trick or treat in their ${animal} costume. Sadly, no one gave ${name} candy because they were scared of black cats and the bad omens connected to them. `;
 
 
-        const text3 = ` ${name} was very hungry and ${emotion} and decided to sneak into their friend ${name2}'s house to talk to ${name2} about what had happened. Unfortunately, hunger took over and ${name} looked through ${name2}’s kitchen and decided to eat ${name2}'s ${fruit} jam, thinking ${name2} wouldn’t mind. `;
-        const text4 = ` ${name} ate the jam while crying and watching ${genre} movies in ${name2}’s living room. On the way to the living room, ${name} had spilled jam over the floor and smeared it on the walls because they had stumbled over a table. `;
-
+        const text3 = ` ${name} was very hungry and ${emotion}. ${name} decided to sneak into their friend ${name2}'s house to talk about what had happened. Unfortunately, hunger took over and ${name} looked through ${name2}’s kitchen and decided to eat ${name2}'s ${fruit} jam, thinking ${name2} wouldn’t mind. `;
+        const text4 = ` In ${name2}’s living room, ${name} ate the jam while crying and watching ${genre} movies. On the way to the living room, ${name} had spilled jam over the floor and smeared it on the walls. From the noise, ${name2} woke up,and after seeing the smears in the hallway, screamed ${adj}-murder. The next day, ${name2} confessed to ${name}.`; 
         
         madlib.innerHTML = text1 + text2 + text3 + text4;
 
@@ -40,7 +39,7 @@
         document.getElementById('sec1').className="hidden";
 
 
-        /*BEAR IMAGE CHANGES*/
+        /*changing image*/
         if (animal =='bear' && fruit=="cherry") {
             document.getElementById('hat1ch').className="show";
         }

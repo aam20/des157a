@@ -115,6 +115,7 @@ footer{
     text-align: left;
     line-height:1.6em;
     /*z-index:1;*/
+    /*position: absolute;*/
 }
 
 footer a {
@@ -193,6 +194,10 @@ article#madlib {
 }
 
 
+
+
+
+
 /*********media query*********/
 /*****DESKTOP*****/
 @media only screen and (min-width: 800px)
@@ -235,7 +240,7 @@ article#madlib {
         margin-left: 6%;
         /*move overlay*/
         position: absolute;
-        top: 30%; 
+        top: 30%; /*move overlay*/
         /*left:0;*/
     }
 
