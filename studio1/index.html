@@ -13,83 +13,99 @@
     <link href="styles.css" rel="stylesheet">
 </head>
 <body>
-    <img class="drip" src="images/jam.png" alt="dripping jam">
+    <img class="drip" src="images/jam2.png" alt="dripping jam">
 
     <header>
         <h1>Murder Mystery
-            <img src="images/butterfly.png" alt="red butterfly next to title">
+            <img id="butterfly" src="images/butterfly.png" alt="red butterfly next to title">
         </h1>
     </header>
     
     <main>        
 
-        <img id="bear1" src="images/sittingbear.png" alt="a sitting brown bear">
+        <section id="sec1">
+            <img id="bear1" src="images/sittingbear.png" alt="a sitting brown bear">
 
-        <div id="form">
-            <form>
-            
-                <div class="in">
-                    <label for="place">A Place:</label>
-                    <input type="text" name="place" id="place" required>
-                </div>
+            <div id="form">
+                <form>
+                    <h2>Fill in to reveal the mystery.</h2>
+                
+                    <div class="in">
+                        <label for="place">A Place:</label>
+                        <input type="text" name="place" id="place" required>
+                    </div>
 
-                <div class="in">
-                    <label for="name">A Name:</label>
-                    <input type="text" name="name" id="name" required>
-                </div>
+                    <div class="in">
+                        <label for="name">A Name:</label>
+                        <input type="text" name="name" id="name" required>
+                    </div>
 
-                <div class="in">
-                    <label for="verb">A Verb (-ing): </label>
-                    <input type="text" name="verb" id="verb" required>
-                </div >
-            
-
-                <div class="in">
-                    <label for="emotion">A Negative Emotion:</label>
-                    <input type="text" name="emotion" id="emotion" required>
-                </div>
+                    <div class="in">
+                        <label for="verb">A Verb (-ing): </label>
+                        <input type="text" name="verb" id="verb" required>
+                    </div >
                 
 
-                <div class="in">
-                    <label for="genre">A Movie Genre:</label>
-                    <input type="text" name="genre" id="genre" required>
-                </div>
-            
-                <div class="in">
-                    <label for="adjective">An Adjective:</label> 
-                    <input type="text" name="adjective" id="adjective" required>
-                </div>
-
-                <div class="in">
-                    <label for="animal">Pick One Animal</label>
-                    <select id="animal" name="animal">
-                        <option value="bear">bear</option>
-                        <option value="tiger">tiger</option>
-                    </select>
-                </div>
-
-                <div class="in">
-                    <label for="fruit">Pick One Fruit</label>
-                    <select id="fruit" name="fruit">
-                        <option value="strawberry">strawberry</option>
-                        <option value="raspberry">raspberry</option>
-                        <option value="cherry">cherry</option>
-                    </select>
-                </div>
+                    <div class="in">
+                        <label for="emotion">A Negative Emotion:</label>
+                        <input type="text" name="emotion" id="emotion" required>
+                    </div>
+                    
+                    <div class="in">
+                        <label for="name2">Another Name:</label>
+                        <input type="text" name="name2" id="name2" required>
+                    </div>
 
 
-                <div class="in">
-                    <br>
-                    <input type ="submit" name="reveal" value="REVEAL">
-                </div>
+                    <div class="in">
+                        <label for="genre">A Movie Genre:</label>
+                        <input type="text" name="genre" id="genre" required>
+                    </div>
+                
+                    <div class="in">
+                        <label for="adj">An Adjective:</label> 
+                        <input type="text" name="adj" id="adj" required>
+                    </div>
 
-            </form>
-        </div>
+                    <div class="in">
+                        <label for="animal">Pick One Animal</label>
+                        <select id="animal" name="animal">
+                            <option value="bear">bear</option>
+                            <option value="frog">frog</option>
+                        </select>
+                    </div>
 
+                    <div class="in">
+                        <label for="fruit">Pick One Fruit</label>
+                        <select id="fruit" name="fruit">
+                            <option value="strawberry">strawberry</option>
+                            <option value="cherry">cherry</option>
+                        </select>
+                    </div>
+
+
+                    <div class="in">
+                        <br>
+                        <input type ="submit" name="reveal" value="REVEAL">
+                    </div>
+
+                </form>
+            </div>
+        </section>
+
+        <section id="overlay" class="hidden"> 
+                <img id="hat1st" src="images/hat1-st.png" alt="cat with bear hat and strawberry jam" class="hide">
+                <img id="hat1ch" src="images/hat1-ch.png" alt="cat with bear hat and cherry jam" class="hide">
+                <img id="hat2st" src="images/hat2-st.png" alt="cat with frog hat and strawberry jam" class="hide">
+                <img id="hat2ch" src="images/hat2-ch.png" alt="cat with frog hat and cherry jam" class="hide">
+                <article id="madlib"></article>
+        </section>
+
+        
     </main>
 
     
-    <footer>
+    <footer id="footer">
         <p>By Annamaria Avila Magdaleno</p>
 
         <p>
