@@ -40,7 +40,7 @@
         document.getElementById('sec1').className="hidden";
 
 
-        /*changing image*/
+        /*BEAR IMAGE CHANGES*/
         if (animal =='bear' && fruit=="cherry") {
             document.getElementById('hat1ch').className="show";
         }
