@@ -1,0 +1,220 @@
+body {
+    margin: 0;
+    padding: 0;
+    margin-top:10px;
+    text-align: center;
+    font-family: 'Mali', cursive;
+    background-color:#faeade;
+}
+
+header {
+    margin-top: 40px;
+    font-family: 'Emilys Candy', cursive;
+    font-size: x-large;
+    color:#4E1C29;
+}
+
+header p {
+    margin-left: 2%;
+    margin-right: 2%;
+
+}
+h1 {
+    font-size: 300%;
+}
+
+/**SLIDER**/
+#slider {
+    display: flex;
+    position: relative;
+    top:0;
+    left: 0;
+    padding-bottom:7em; /*added padding @ bottom as the slider is added*/
+    overflow-x:scroll; /*change to y to make column*/
+}
+
+
+#slider div img {
+    height: 100%;
+    width:100%; /*added*/
+    display: block;
+    margin-left: 20px;
+    margin-top:40px;
+}
+
+.a, .b {
+   display: flex; /*change to block to make column*/
+   height: 100%;
+}
+
+
+footer {
+    margin-top: 20px;
+}
+
+/********OVERLAY********/
+
+.showing {
+    /*display: block;*/
+    display: block;
+    opacity: 100%;
+}
+
+.hidden {
+    opacity:0%;
+    display:block;
+    display:none;
+}
+
+
+#overlay1 {
+    position: absolute;
+    top: 30%; 
+    left:15%;
+    width: 70vw;
+    align-items: center;
+    background-color:#faeade;
+    border-color:#b44361;
+    border-style:solid;
+    border-width: 10px;;
+    border-radius: 40px;
+    justify-content: center;
+    padding-top:20px;
+    padding-bottom:20px;
+}
+
+#overlay1 h2 {
+    font-family: 'Emilys Candy', cursive;
+    color:#4E1C29;
+    font-size: 200%;
+    text-align: left;
+    padding-left:5%;
+}
+
+#overlay1 p {
+    text-align: left;
+    padding-left:5%;
+    padding-right:5%;
+    font-size: 100%;
+}
+
+
+/*IMG ID for image in overlay*/
+#myImage{
+    max-width:90%; /*USED TO BE 95%*/
+    border-radius:40px;
+}
+
+/*FOOTER*/
+footer{
+    background-color:#4e1c29d3;
+    color: white;
+    max-width: 1200px;
+    margin:auto;
+    padding-top: 2%;
+    padding-bottom: 4%;;
+    margin-top: 7%;
+    text-align: left;
+    line-height:1.6em;
+    border-radius: 40px;
+    border-bottom-right-radius:0;
+    border-bottom-left-radius:0;
+}
+
+footer a {
+    color: #C26761;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color:#FFFFFF;
+}
+
+footer p {
+    margin:auto;
+    width:80%;
+}
+
+
+/*CLOSING X*/
+.close {
+    float: right;
+    color: #fff;
+    border-radius: 50px;
+    border:none;
+    width: 45px;
+    height: 45px;
+    position:relative;
+    z-index: 2; /*bring x forward to be able to close in mobile*/
+    right:4%;
+    font-size: 190%;
+    background-color:#4E1C29;
+    display: block;
+    font-family: 'Mali', cursive;
+    
+}
+
+
+
+/*********media query*********/
+/*****DESKTOP*****/
+@media only screen and (min-width: 800px)
+{
+    
+    footer {
+        display: flex;
+        padding:0;
+        text-align:center;
+        /*margin-top:2%;*/
+        /*margin-top:18%;*/
+        padding-bottom:2%;
+        padding-top:2%;
+        /*margin-top:20%;*/
+        min-width:80%;
+        /*position: absolute;
+        bottom:-55%;*/
+        padding-left:7%;
+    }
+
+    footer p {
+        flex:1;
+    }
+    /*IMG ID for image in overlay*/
+    #myImage{
+        max-width:60%;
+        border-radius:40px;
+    }
+
+    /*flex ID insid class*/
+    #flex {
+        top: 20%; 
+        display:flex;
+        
+    }
+
+    /*img in overlay*/
+    #containImg img{
+        max-width:80%;
+    }
+
+    #containImg{
+        flex:1;
+    }
+
+    article {
+        flex:1;
+    }
+
+    /*overlay*/
+    #overlay1 p {
+        padding-left:0;
+    }
+
+    #overlay1 h2 {
+        padding-left:0;
+    }
+}/*********END media query*********/
+
+
+
+
