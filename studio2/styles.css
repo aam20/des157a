@@ -29,31 +29,25 @@ h1 {
     position: relative;
     top:0;
     left: 0;
-    padding-bottom:7em; /*added padding @ bottom as the slider is added*/
-    overflow-x:scroll; /*change to y to make column*/
+    /*padding-bottom:7em; /*added padding @ bottom as the slider is added*/
+    overflow-x:scroll;
+    height: 100%;
 }
 
 
-#slider div img {
+#slider img {
     height: 100%;
     width:100%; /*added*/
     display: block;
-    margin-left: 20px;
-    margin-top:40px;
+    padding-left: 20px;
+    margin-top:20px;
 }
-
-.a, .b {
-   display: flex; /*change to block to make column*/
-   height: 100%;
-}
-
 
 footer {
     margin-top: 20px;
 }
 
 /********OVERLAY********/
-
 .showing {
     /*display: block;*/
     display: block;
@@ -72,13 +66,13 @@ footer {
     top: 30%; 
     left:15%;
     width: 70vw;
-    align-items: center;
+    /*align-items: center;*/
     background-color:#faeade;
     border-color:#b44361;
     border-style:solid;
     border-width: 10px;;
     border-radius: 40px;
-    justify-content: center;
+    /*justify-content: center;*/
     padding-top:20px;
     padding-bottom:20px;
 }
@@ -95,13 +89,12 @@ footer {
     text-align: left;
     padding-left:5%;
     padding-right:5%;
-    font-size: 100%;
+    font-size: 120%;
 }
-
 
 /*IMG ID for image in overlay*/
 #myImage{
-    max-width:90%; /*USED TO BE 95%*/
+    max-width:90%;
     border-radius:40px;
 }
 
@@ -135,7 +128,6 @@ footer p {
     width:80%;
 }
 
-
 /*CLOSING X*/
 .close {
     float: right;
@@ -156,6 +148,8 @@ footer p {
 
 
 
+
+
 /*********media query*********/
 /*****DESKTOP*****/
 @media only screen and (min-width: 800px)
@@ -165,14 +159,9 @@ footer p {
         display: flex;
         padding:0;
         text-align:center;
-        /*margin-top:2%;*/
-        /*margin-top:18%;*/
         padding-bottom:2%;
         padding-top:2%;
-        /*margin-top:20%;*/
         min-width:80%;
-        /*position: absolute;
-        bottom:-55%;*/
         padding-left:7%;
     }
 
