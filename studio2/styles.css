@@ -55,22 +55,19 @@ h1 {
 
 
 #slider img {
-    /* margin-left:auto;
-    margin-right:auto; */
     margin:auto;
     height: 70%;
     width:70%; /*added*/
     display: block;
-    padding-left: 20px;
     margin-top:20px;
     transform: scale(1);
-    transition: all 3s ease-in;
+    transition: all 2.5s ease-in;
 }
 
 #slider img:hover {
     transform: scale(0.9);
-    transition: all 3s ease-in-out;
-    filter: blur(5px);
+    transition: all 2.5s ease-in-out;
+    filter: blur(3px);
 }
 
 
@@ -182,6 +179,7 @@ footer p {
 @media only screen and (min-width: 800px)
 {
     body {
+        background: rgb(78,28,41);
         background: linear-gradient(180deg, rgba(78,28,41,1) 0%, rgba(250,234,222,1) 24%);   
     }
 
@@ -198,6 +196,7 @@ footer p {
     #slider img {
         height: 100%;
         width:100%; /*added*/
+        padding-left: 20px;
     }
 
     /*IMG ID for image in overlay*/
