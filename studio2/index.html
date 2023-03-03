@@ -4,15 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+   
+    <!-- NORMALIZE SCRIPT -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer">
 
+    <!--GOOGLE FONTS-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Emilys+Candy&family=Mali&display=swap" rel="stylesheet">
     
     <title>LUNA's Loteria</title>
 
+    <!--SCRIPT-->
     <script src="script.js" defer></script>
+    <!--STYLESHEET-->
     <link href="styles.css" rel="stylesheet">
 </head>
 <body>
@@ -20,10 +25,11 @@
         <h1>
              LUNA's Loteria <img id="moon" src="images/moon.png" alt="moon logo">
         </h1>
-        <p>scroll left and click on the loteria cards to learn about Luna</p>
+        <p>scroll and click on the loteria cards to learn about Luna</p>
     </header>
 
     <main>
+        <!--SECTION FOR SLIDESHOW/CAROUSEL-->
         <section>
             <div id="slider">
                 <img src="images/crd1.png" alt="slide of luna in a sink">
@@ -39,11 +45,12 @@
             </div>
         </section>
 
+        <!--SECTION FOR OVERLAY-->
         <section id="overlay1" class="hidden"> <!--INPUT INFO BASED ON CARD-->
             <button class="close">x</button>
             <div id="flex">
                 <div id="containImg">
-                    <img src="images/img1.jpg" alt="cat in sink" id="myImage">
+                    <img src="images/img1.jpg" alt="image of luna" id="myImage">
                 </div>
 
                 <article>
@@ -54,7 +61,7 @@
         </section>
     </main>
 
-    <footer>
+    <footer><!--FOOTER-->
         <p>By Annamaria Avila Magdaleno</p>
 
         <p>

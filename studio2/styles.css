@@ -4,12 +4,11 @@ body {
     margin-top:10px;
     text-align: center;
     font-family: 'Mali', cursive;
-    /*background-color:#faeade;*/
     background: rgb(78,28,41);
-    background: linear-gradient(180deg, rgba(78,28,41,1) 0%, rgba(250,234,222,1) 24%);      
-    
+    background: linear-gradient(180deg, rgba(78,28,41,1) 0%, rgba(250,234,222,1) 5%);      
 }
 
+/*HEADER*/
 header {
     margin-top: 40px;
     font-family: 'Emilys Candy', cursive;
@@ -18,8 +17,13 @@ header {
     animation:float infinite ease-in-out 3.5s;
 }
 
-#moon {
+#moon {/*LOGO*/
     width:7%;;
+}
+
+header p {
+    margin-left: 2%;
+    margin-right: 2%;
 }
 
 @keyframes float { 
@@ -37,30 +41,25 @@ header {
     
 }
 
-
-header p {
-    margin-left: 2%;
-    margin-right: 2%;
-
-}
 h1 {
     font-size: 300%;
 }
 
 /**SLIDER**/
 #slider {
-    display: flex;
     position: relative;
     top:0;
     left: 0;
-    overflow-x:scroll;
     height: 100%;
 }
 
 
 #slider img {
-    height: 100%;
-    width:100%; /*added*/
+    /* margin-left:auto;
+    margin-right:auto; */
+    margin:auto;
+    height: 70%;
+    width:70%; /*added*/
     display: block;
     padding-left: 20px;
     margin-top:20px;
@@ -71,28 +70,24 @@ h1 {
 #slider img:hover {
     transform: scale(0.9);
     transition: all 3s ease-in-out;
+    filter: blur(5px);
 }
 
-footer {
-    margin-top: 20px;
-}
+
 
 /********OVERLAY********/
 .showing {
-    /*display: block;*/
     display: block;
     opacity: 100%;
 }
 
 .hidden {
     opacity:0%;
-    display:block;
     display:none;
 }
 
-
 #overlay1 {
-    position: absolute;
+    position: relative;
     top: 30%; 
     left:15%;
     width: 70vw;
@@ -141,6 +136,7 @@ footer{
     border-radius: 40px;
     border-bottom-right-radius:0;
     border-bottom-left-radius:0;
+    margin-top: 10%;
 }
 
 footer a {
@@ -181,15 +177,66 @@ footer p {
     border: solid 3px #4E1C29;
 }
 
-
-
-
-/*********media query*********/
+/******************MEDIA QUERY******************/
 /*****DESKTOP*****/
 @media only screen and (min-width: 800px)
 {
+    body {
+        background: linear-gradient(180deg, rgba(78,28,41,1) 0%, rgba(250,234,222,1) 24%);   
+    }
+
+    #moon { /*LOGO*/
+        width:3.2%;;
+    }
+
+    /**SLIDER**/
+    #slider {
+        overflow-x:scroll;
+        display: flex; 
+    }
+
+    #slider img {
+        height: 100%;
+        width:100%; /*added*/
+    }
+
+    /*IMG ID for image in overlay*/
+    #myImage{
+        max-width:60%;
+        border-radius:40px;
+    }
+
+    /*an ID is called flex TO FLEX IMAG & INFO OF OVERLAY*/
+    #flex {
+        top: 20%; 
+        display:flex;
+        
+    }
+
+    /*overlay*/
+    #overlay1 p {
+        padding-left:0;
+    }
+
+    #overlay1 h2 {
+        padding-left:0;
+    }
+
+    /*IMG IN OVERLAY*/
+    #containImg img{
+        max-width:80%;
+    }
+
+    #containImg{
+        flex:1;
+    }
+
+    article {
+        flex:1;
+    }
     
-    footer {
+     /* FOOTER */
+     footer {
         display: flex;
         padding:0;
         text-align:center;
@@ -202,47 +249,4 @@ footer p {
     footer p {
         flex:1;
     }
-
-    #moon {
-        width:3.2%;;
-    }
-    
-    /*IMG ID for image in overlay*/
-    #myImage{
-        max-width:60%;
-        border-radius:40px;
-    }
-
-    /*flex ID inside class*/
-    #flex {
-        top: 20%; 
-        display:flex;
-        
-    }
-
-    /*img in overlay*/
-    #containImg img{
-        max-width:80%;
-    }
-
-    #containImg{
-        flex:1;
-    }
-
-    article {
-        flex:1;
-    }
-
-    /*overlay*/
-    #overlay1 p {
-        padding-left:0;
-    }
-
-    #overlay1 h2 {
-        padding-left:0;
-    }
 }/*********END media query*********/
-
-
-
-
