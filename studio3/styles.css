@@ -88,9 +88,8 @@ div {
 }
 
  #actions button:hover {
-    color: #fff;
-    border: 3px #607E26;
-    background-color:#607E26;
+    color: #355124;
+    background-color:#fff;
 } 
 
 #score {
@@ -116,7 +115,7 @@ div {
 #rules:hover,button:hover {
     color:#607E26;
     background-color: #fff;
-    border: solid 3px #607E26;
+    border: solid #607E26;
 }
 
 /*OVERLAY*/
@@ -151,7 +150,7 @@ div {
 .close:hover {
     color:#607E26;
     background-color: #fff;
-    border: solid 3px #607E26;
+    border: solid #607E26;
 }
 
 /*FOOTER*/
