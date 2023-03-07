@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catch Your Happiness$$</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Mali&display=swap" rel="stylesheet">
+
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+	<link href="styles.css" rel="stylesheet">
+	<script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>$ Catch Your Happiness $ <img id="cheese" src="images/cheese.png" alt="cheese logo">
+        </h1>
+    </header>
+
+    <main>
+        <!--overlay for rules-->
+        <section id="overlay1" class="hidden">
+            <button class="close">close</button>
+            <h3>RULES</h3>
+            <p>There are two players. The player whose turn it is rolls the dice. The total of the roll is added to the current player's score, unless either die comes up as a "one". If this happens, this player's turn is over, and it is the other player’s turn. After each roll, the current player can either roll again, (assuming a "one" was not rolled) or if the current player feels that luck is running thin, they can pass to the other player. The first player to get 30 points or higher wins.</p> 
+            <p>Oh, and if you roll two "ones" (snake eyes), your current score gets zeroed out. So don’t do that.</p>
+        </section>  
+        
+        
+        <div id="gamecontrol">
+            <div>
+                <h2>Start Game</h2> 
+                <button id="startgame">Randomly Pick the First Player & Start the Game</button>
+             </div>
+            <img src="images/mouse.png" alt="mouse looking at desk">
+           
+        </div>
+        
+        <button class="showing" id="rules">rules</button> <!--RULES BUTTON activates overlay-->
+        <div id="score"></div>
+
+        <div class="split">
+            <div id="actions"></div>
+            <div id="game"></div>
+        </div>
+    </main>
+
+    <footer><!--FOOTER-->
+        <p>By Annamaria Avila Magdaleno</p>
+
+        <p>
+            Contact: 
+            <a href="mailto:avilama@ucdavis.edu">avilama@ucdavis.edu</a>
+        </p>
+
+        <p><a href="sources.html">sources</a></p>
+
+        <p><a href="https://validator.w3.org/check?uri=https://aam20.github.io/des157a/studio3/index.html">Valid HTML 5</a></p>
+
+        <p><a href="https://jigsaw.w3.org/css-validator/validator?uri=https://aam20.github.io/des157a/studio3/styles.css">Valid CSS </a></p>
+
+        
+    </footer>
+    
+</body>
+</html>

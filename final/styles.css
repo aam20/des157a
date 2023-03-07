@@ -1,0 +1,128 @@
+body {
+    margin: 0;
+    padding: 0;
+    max-width:80%;
+    /* margin-top:10px; */
+    text-align: left;
+    margin: auto;
+    font-family: 'Mali', cursive;
+    background: rgb(78,28,41);
+    background: linear-gradient(180deg, rgba(78,28,41,1) 0%, rgba(250,234,222,1) 7%);   
+    background-size: cover;
+}
+
+/*HEADER*/
+header {
+    margin-top: 7%;
+    font-family: 'Emilys Candy', cursive;
+    font-size: x-large;
+    color:#4E1C29;
+    animation:float infinite ease-in-out 3.5s;
+}
+
+h2 {
+    color:#4E1C29;
+    font-family: 'Emilys Candy', cursive;
+    font-size:200%;
+}
+
+p {
+    line-height:1.6em;
+    color:#4E1C29;
+}
+
+
+/* SECTION */
+
+section {
+    margin-bottom:3%;
+}
+
+
+img {
+    height:auto;
+    max-width:100%;
+    display: block;
+}
+
+figcaption {
+    text-align: center;
+    padding-top:2%;
+}
+
+
+/*FOOTER*/
+footer{
+    background-color:#4e1c29d3;
+    color: white;
+    max-width: 1200px;
+    margin:auto;
+    padding-top: 2%;
+    padding-bottom: 4%;;
+    margin-top: 7%;
+    text-align: left;
+    line-height:1.6em;
+    border-radius: 40px;
+    border-bottom-right-radius:0;
+    border-bottom-left-radius:0;
+    margin-top: 10%;
+}
+
+footer a {
+    /* color: #C26761; */
+    color:#ca9fa0;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color:#faeade;
+}
+
+footer p {
+    margin:auto;
+    width:80%;
+    color:#faeade;
+}
+
+
+
+ /******************MEDIA QUERY******************/
+/*****DESKTOP*****/
+@media only screen and (min-width: 800px)
+{
+
+    body {
+        max-width:70%;
+        background: rgb(78,28,41);
+        background: linear-gradient(180deg, rgba(78,28,41,1) 0%, rgba(250,234,222,1) 13%);   
+    }
+
+    .split {
+        display:flex;
+    }
+
+    .one {
+        flex:1;
+    }
+
+    .two {
+        flex:1;
+        margin-left:20px;
+        
+    }
+    
+    /* FOOTER */
+    footer {
+        display: flex;
+        padding:0;
+        text-align:center;
+        padding-bottom:2%;
+        padding-top:2%;
+        min-width:80%;
+        padding-left:7%;
+    }
+
+    footer p {
+        flex:1;
+    }
+}
