@@ -12,17 +12,35 @@ body {
     background-color: #f7ffe7;
 }
 
+/*IMGs*/
 img {
     max-width:90%;
 }
 
+#cheese {
+    max-width:100%;
+}
+
+#gamestart img  {
+    min-width:50%;
+}
+
+/*MOUSE IMAGES*/
+#gamecontrol img  {
+    min-width:50%;
+}
+
+#scoreboard img  {
+    min-width:50%;
+}
 
 #cheese {/*LOGO*/
     width:30%;;
 }
 
+/*TEXT*/
 h1 {
-    font-size: 300%;
+    font-size: 320%;
     line-height: 1.1em;
     text-align: center;
     font-family: 'Kaushan Script', cursive;
@@ -57,72 +75,117 @@ h3 {
     
 }
 
+/*button*/
 button { 
     padding: 10px;
     border-radius:40px;
     background-color:#607E26;
     color: #fff;
-    border: 1px #607E26;
+    border: solid 3px #607E26;
 }
 
 div {
     padding: 20px;
 }
 
+/*START PART OF GAME*/
 #gamecontrol { 
+    background-color: #e2f9b4;
+    border-radius:40px;
+    padding-left:0;
+    padding-right:0;
+}
+
+#gamecontrol h2 {
+    padding-top:0;
+    margin-top:0;
+    margin-bottom:0;
+}
+
+#gamecontrol p {
+    padding-left:5%;
+    padding-right:5%;
+}
+
+#gamecontrol form{
+    margin-top:5%;
+}
+
+/*RESULTS OF DICE PART*/
+#game {
+    /* background-color: #b8db74; */
     background-color: #e2f9b4;
 }
 
-#game {
-    background-color: #b8db74;
-}
-#actions {
+/* ROLL AGAIN / PASS */
+#actions { 
     background-color:#607E26;
     color:white;
+    
 }
 
 #actions button {
     color: #fff;;
-    border: 3px #fff;
+    border: solid#607E26;
     background-color:#355124;
+    font-size: 180%;
 }
 
  #actions button:hover {
     color: #355124;
     background-color:#fff;
+    border: solid#607E26;
 } 
 
-#score {
+/*SCORE BOARD*/
+#score { 
     background-color: #607E26;
     color:#fff;
-    padding-bottom:3%;
-    padding-top:3%;
+    padding:0;
+    padding-right:2%;
     font-size: 150%;
+    border-radius:40px;
+    text-align: center;
+    font-size:180%;
 }
 
 #score h2 {
     color:#fff;
 }
 
-#rules {
+#score p {
+    line-height: 1.6em;
+}
+
+
+#p2, #p1 {
+    /* padding-left:5%; */
+    margin:auto;
+}
+
+#rules { /*rules button*/
     background-color:#b8db74;
     margin-bottom:2%;
     color:#607E26;
     border: solid 1px #607E26;
     float: right; 
+    border: solid#607E26;
+    position:relative;
+    display:block;
 }
 
 #rules:hover,button:hover {
     color:#607E26;
     background-color: #fff;
-    border: solid #607E26;
+    border: solid#607E26;
 }
 
 /*OVERLAY*/
 #overlay1 {
-    /* background-color: #dbecb9; */
     background-color:#e2f9b4;
     padding:2%;
+    position:relative;
+    border-radius:40px;
 }
 
 .showing {
@@ -145,12 +208,13 @@ div {
     z-index: 2; /*bring x forward to be able to close in mobile*/
     background-color:#607E26;
     display: block;
+    border: solid 3px #607E26;
 }
 
 .close:hover {
     color:#607E26;
     background-color: #fff;
-    border: solid #607E26;
+    border: solid 3px #607E26;
 }
 
 /*FOOTER*/
@@ -182,42 +246,115 @@ footer p {
     width:80%;
 }
 
+/*ID for scoreboard and WINNING AREA*/
+#scoreboard {
+    background-color: #607E26;
+    color:#fff;
+    border-radius:40px;
+}
+
+#congrats {
+    margin: auto;
+    background-color:#e2f9b4;
+    padding:2%;
+    border-radius:40px;
+
+}
+
+#yes {
+    background-color: #e2f9b4;
+    border-radius:40px;
+}
 
 
+#scoreboard img {
+    max-width:50%;
+    margin:auto;
+}
 
+.split3 {
+    display:flex;
+    max-width:80%
+}
 
+/* LINKs */
+.link a{
+    color:#b8db74;
+    background-color: #355124;
+    border-radius: 40px;
+    padding:1%;
+}
+
+.link a:hover {
+    color: #355124;
+    background-color:#b8db74;
+}
+
+ul li a{
+    text-decoration: none;
+}  
+
+ul li{
+    margin-bottom:3%;
+}
+
+a {
+    color: #355124;
+    
+}
+
+a:hover {
+    color:#607E26;
+}
 
 /******************MEDIA QUERY******************/
 /*****DESKTOP*****/
 @media only screen and (min-width: 800px)
 {
-
+    /*IMGs*/
     #cheese {/*LOGO*/
         width:7%;;
     }
 
-    .split {
+    #gamecontrol img {
+        min-width:30%;
+    }
+    
+    #scoreboard img {
+        min-width:30%;
+    }
+
+    .split, .split2{
         display:flex;
     }
 
-    #game {
+    #game { 
         flex:3;
     }
 
-    #actions {
+    #actions { /*roll choice*/
         flex:1;
     }
 
-    #gamecontrol {
+    #gamecontrol { /*start of game*/
         display:flex;
         max-width:100%;
+        padding:0;
     }
 
     #gamecontrol h2 {
         margin-right:5%;
         margin-left:5%;
+        padding-bottom:5%;
     }
-    
+
+    #gamecontrol img {
+        height: auto;
+        display:block;
+        margin: auto;
+        padding-left: 5%;
+    }
+
     /* FOOTER */
     footer {
         display: flex;
@@ -233,5 +370,20 @@ footer p {
         flex:1;
     }
 
-   
-}
+    /*mice in score board*/
+    #player2, #score2{
+        margin:auto;
+       
+    }
+    #player1, #score1{
+        margin:auto;
+    }
+
+    #player1{
+        max-width:45%;
+    }
+    #player2 {
+        max-width:45%;
+    }
+
+}/*********END media query*********/

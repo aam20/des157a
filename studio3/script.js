@@ -14,10 +14,11 @@
 	const game = document.getElementById('game');
 	const score = document.getElementById('score');
 	const actionArea = document.getElementById('actions');
+	
 
 	const gameData = {
-		dice: ['images/die1.png', 'images/die2.png', 'images/die3.png', 
-			   'images/die4.png', 'images/die6.png', 'images/die6.png'],
+		dice: ['images/di1.png', 'images/di2.png', 'images/di3.png', 
+			   'images/di4.png', 'images/di6.png', 'images/di6.png'],
 		players: ['player 1', 'player 2'],
 		score: [0, 0],
 		roll1: 0,
@@ -27,14 +28,25 @@
 		gameEnd: 29
 	};
 
+	// AUDIO 
+	const giggle = new Audio ('sounds/giggle6.mp3');
+	const cry = new Audio ('sounds/cry2.mp3');
+	const dice= new Audio ('sounds/dice.m4a');
+	const start= new Audio ('sounds/achievebell.wav');
+	const pass = new Audio ('sounds/boo2.mp3');
+
+	
+	
+	
 	startGame.addEventListener('click', function () {
+		start.play();
 		gameData.index = Math.round(Math.random());
 		console.log(gameData.index);
 
+
 		// gameControl.innerHTML = '<h2>The Game Has Started</h2>'; /*REMOVED*/
-		gameControl.innerHTML = '<h2></h2>'; //ADDED
-		gameControl.innerHTML += '<button id="quit">Wanna Quit?</button>';
-		
+		gameControl.removeAttribute('h2');//innerHTML = '<h2></h2>'; //ADDED
+		gameControl.innerHTML = '<button type = "submit" id="quit">Wanna Quit?</button>';
 
 		document
 			.getElementById('quit').addEventListener('click', function () {
@@ -42,6 +54,7 @@
 			});
 
 		setUpTurn();
+
 	});
 
 	function setUpTurn() {
@@ -63,7 +76,6 @@
 		game.innerHTML += `<img src="${gameData.dice[gameData.roll1-1]}"> 
 							<img src="${gameData.dice[gameData.roll2-1]}">`;
 		gameData.rollSum = gameData.roll1 + gameData.roll2;
-
 
 		// if two 1's are rolled...
 		if( gameData.rollSum === 2 ){ 
@@ -90,15 +102,19 @@
 		// if neither die is a 1...
 		else { 
 			gameData.score[gameData.index] = gameData.score[gameData.index] + gameData.rollSum;
+
+			//SEPARATE THESE BUTTONS 
 			actionArea.innerHTML = '<button id="rollagain">Roll again</button> or <button id="pass">Pass</button>';
 
 			document.getElementById('rollagain').addEventListener('click', function () {
 				//setUpTurn();
-				throwDice();
 				dice.play();//dice sound if roll again
+				throwDice();
+				
 			});
 
 			document.getElementById('pass').addEventListener('click', function () {
+				pass.play();
 				gameData.index ? (gameData.index = 0) : (gameData.index = 1);
 				setUpTurn();
 			});
@@ -114,62 +130,73 @@
 	function checkWinningCondition() {
 		if (gameData.score[gameData.index] > gameData.gameEnd) {
 			// player wins score
-			score.innerHTML = `<h2>${gameData.players[gameData.index]} 
-			wins with ${gameData.score[gameData.index]} points!</h2>`;
-			score.innerHTML += ` <p> CONGRATULATIONS! ${gameData.players[gameData.index]} 
-			can now enjoy their happiness.</p> <img src="images/mouse2.png" alt="mouse crying & looking at desk">`;
+			score.innerHTML = `<h2><span style=" font-size: 80%;">${gameData.players[gameData.index]} 
+			wins with ${gameData.score[gameData.index]} points!<span></h2>`;
 
+			score.innerHTML += ` <p> CONGRATS! <br> ${gameData.players[gameData.index]} 
+			can now enjoy their happiness.</p>`;
+
+			document.getElementById('congrats').className = "showing";
+		
+			//hide score & rolling ability
+			document.querySelector('.split').className = 'hidden';
+			
+			//display flex the scoreboard congrats message & the img in html
+			document.querySelector('#scoreboard').className = 'split2'; 
+
+			document.querySelector('#score').style.display = 'block'; 
 
 			giggle.play(); //GIGGLE OF RAT IF THEY WIN
 
-			document.querySelector('.split').className = "hidden";//hide score & rolling ability 
-
 			actionArea.innerHTML = '';
-			document.getElementById('quit').innerHTML = 'Start a New Game?';
-		} else {
+			document.getElementById('quit').innerHTML = '<span style="font-size:200%;">Start a NEW Game?</span>';
+		} 
+
+		else {
 			// show current score...
 			showCurrentScore();
+			document.getElementById('congrats').className = "hidden"; 
 		}
 	}
 
-	const p1 = document.getElementById('player1');
 
+
+
+	const p1= document.getElementById("p1");
+	const p2= document.getElementById("p2");
+
+	///SCOREBOARD
 	function showCurrentScore() {//SCORE TEXT
-		score.innerHTML = `<p>${gameData.players[0]}: ${gameData.score[0]} || ${gameData.players[1]}: ${gameData.score[1]}</p>`;
+		document.querySelector('#score').className = 'split2'; 
+		p1.innerHTML = `<p>${gameData.players[0]} : <span style="font-size:200%;">${gameData.score[0]}</span> </p>`;
+		p2.innerHTML = ` <p> ${gameData.players[1]}: <span style="font-size:200%;">${gameData.score[1]}</span> </p>`;
+
+		document.querySelector('#scoreboard #player1').className = "showing";
+		document.querySelector('#scoreboard #player2').className = "showing";
+
+		document.querySelector('#scoreboard #score1').className = "split";
+		document.querySelector('#scoreboard #score2').className = "split";		
 	}
 
 
-	// to open overlay with instructions 
-
+	// TO OPEN OVERLAY WITH RULES
 	 /*to close/hide overlay(s)*/
 	 const close = document.querySelector('.close'); 
 	 close.addEventListener('click', function () {
-		 document.getElementById('overlay1').className="hidden";//overlay hides
-		 document.querySelector('#rules').className = "showing";//carousel shows
+		 document.getElementById('overlay1').className="hidden";//rules overlay hides
+		 document.querySelector('#rules').className = "showing";//button shows
+		 document.querySelector('#yes').className = "showing";//when close yes div shows 
 		 console.log('close');
 	 });
 
-	 /*to open*/
+	 /*to open rules*/
 	 const rules = document.querySelector('#rules'); 
 	 rules.addEventListener('click', function () {
 		 document.getElementById('overlay1').className="showing";//overlay hides
-		 document.querySelector('#rules').className = "hidden";//carousel shows
+		 document.querySelector('#rules').className = "hidden";//rules show
+
+		 document.querySelector('#yes').className = "hidden";//gamecontrol shows
 	 });
 
-
-
-	// AUDIO 
-	const giggle = new Audio ('sounds/giggle6.mp3');
-	const cry = new Audio ('sounds/cry2.mp3');
-	const buttonClick = new Audio ('sounds/button.m4a');
-	const dice= new Audio ('sounds/dice.m4a');
-
-
-	// const gigglebutton = document.querySelector('.close');
-	// const giggle = new Audio ('sounds/giggle6.mp3');
-	// gigglebutton.addEventListener('click', function () {
-	// 	
-	// });
-	
 
 }());
