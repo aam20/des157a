@@ -9,7 +9,8 @@ body {
     text-align:left;  
     font-family: 'Mali', cursive; 
     font-size: 120%;
-    background-color: #f7ffe7;
+    background: rgb(96,126,38);
+    background: linear-gradient(180deg, rgba(96,126,38,1) 0%, rgba(247,253,231,1) 10%);
 }
 
 /*IMGs*/
