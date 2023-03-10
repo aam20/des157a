@@ -34,7 +34,7 @@
         
 
         
-        <div id="yes">
+        <div id="start">
             <button class="showing" id="rules">rules</button> <!--RULES BUTTON activates overlay-->
             <div id="gamecontrol" class="showing" >
                 <!-- START OF GAME, QUIT, NEW GAME -->
@@ -47,30 +47,39 @@
                 <img src="images/mouse.png" alt="mouse looking at desk" >
             </div>
         </div>
-        
 
-        <!-- SCOREBOARD -->
-        <div id="scoreboard">
+        <!-- ROLL ACTIONS & DICE GAME RESULTS-->
+        <div class="split">
+
+            <!-- DICE ACTION + RESULTS(game) -->
+            <div id="left" class="hidden">
+                <div id="actions"></div>
+                <div id="game"></div>
+            </div>
+
+             <!-- SCOREBOARD -->
+        <div id="scoreboard" class="hidden">
             <div id="score">
                 <div id="score1">
                     <img src="images/m1.png" alt="mouse looking at desk" class="hidden" id="player1">
-                    <p id="p1"></p>
+                    <p id="p1">
+                        
+                    </p>
                 </div>
+            
                 <div id="score2">
                     <img src="images/m2.png" alt="mouse looking at desk" class="hidden" id="player2">
                     <p id="p2"></p>
                 </div>
             </div>
-        
+    
             <img src="images/mouse2.png" alt="mouse looking at desk" class="hidden" id="congrats">
         </div>
-       
 
-        <!-- ROLL ACTIONS & DICE GAME RESULTS-->
-        <div class="split">
-            <div id="actions"></div>
-            <div id="game"></div>
         </div>
+
+
+        
     </main>
 
     <footer><!--FOOTER-->

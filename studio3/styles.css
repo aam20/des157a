@@ -175,6 +175,9 @@ div {
     display:block;
 }
 
+#startgame {
+     font-size: 150%;
+}
 #rules:hover,button:hover {
     color:#607E26;
     background-color: #fff;
@@ -262,7 +265,7 @@ footer p {
 
 }
 
-#yes {
+#start {
     background-color: #e2f9b4;
     border-radius:40px;
 }
@@ -308,6 +311,12 @@ a:hover {
     color:#607E26;
 }
 
+/*flex contents of score*/
+/*so mouse are next to scores*/
+.scoresFlex {
+    display:flex;
+}
+
 /******************MEDIA QUERY******************/
 /*****DESKTOP*****/
 @media only screen and (min-width: 800px)
@@ -325,12 +334,19 @@ a:hover {
         min-width:30%;
     }
 
-    .split, .split2{
+    .split {
         display:flex;
+        margin:auto;
+    }
+
+    .split2 {
+        display: flex;
+        /* flex:1; */
+        margin:auto;
     }
 
     #game { 
-        flex:3;
+        flex:1; /*used to be 3*/
     }
 
     #actions { /*roll choice*/
@@ -371,6 +387,11 @@ a:hover {
         flex:1;
     }
 
+   section div.split {
+        /* margin-left:5%; */
+        margin:auto;
+    }
+    
     /*mice in score board*/
     #player2, #score2{
         margin:auto;
@@ -385,6 +406,18 @@ a:hover {
     }
     #player2 {
         max-width:45%;
+    }
+
+    #left {
+        margin:auto;
+    }
+
+    /*rolling actions on the left*/
+    div#left.showing {
+        margin-right:0;
+        margin-left:0;
+        margin-right:3%;
+        flex:70%;
     }
 
 }/*********END media query*********/

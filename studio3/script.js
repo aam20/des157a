@@ -38,31 +38,36 @@
 	
 	
 	
-	startGame.addEventListener('click', function () {
+	startGame.addEventListener('click', function (event) {
 		start.play();
 		gameData.index = Math.round(Math.random());
 		console.log(gameData.index);
 
 
-		// gameControl.innerHTML = '<h2>The Game Has Started</h2>'; /*REMOVED*/
-		gameControl.removeAttribute('h2');//innerHTML = '<h2></h2>'; //ADDED
+		document.querySelector('div #left').className = 'hidden';
+		document.querySelector('#scoreboard').className = 'showing';
+
+		gameControl.removeAttribute('h2');
 		gameControl.innerHTML = '<button type = "submit" id="quit">Wanna Quit?</button>';
 
 		document
 			.getElementById('quit').addEventListener('click', function () {
 				location.reload();
 			});
-
+		showCurrentScore();
 		setUpTurn();
+		
 
 	});
 
 	function setUpTurn() {
 		game.innerHTML = `<p>Roll the dice for the ${gameData.players[gameData.index]}</p>`;
 		actionArea.innerHTML = '<button id="roll">Roll the Dice</button>';
+		document.querySelector('div #left').className = 'showing';
 		document.getElementById('roll').addEventListener('click', function(){
 
 			throwDice();
+			
 			//DICE SOUND
 			dice.play();
 		});
@@ -77,20 +82,19 @@
 							<img src="${gameData.dice[gameData.roll2-1]}">`;
 		gameData.rollSum = gameData.roll1 + gameData.roll2;
 
-		// if two 1's are rolled...
+		//// if two 1's are rolled...
 		if( gameData.rollSum === 2 ){ 
 			game.innerHTML += '<p>Oh snap! Snake eyes!</p>';/*INSERT GRAPHIC OF SNAKE*/
 			gameData.score[gameData.index] = 0;
 			gameData.index ? (gameData.index = 0) : (gameData.index = 1);
 			showCurrentScore();
 			setTimeout(setUpTurn, 2000);
-			
-			
+		
 			///SOUND FOR SNAKE EYES
 			cry.play();
 		}
 
-		// if either die is a 1...
+		//// if either die is a 1...
 		else if(gameData.roll1 === 1 || gameData.roll2 === 1){ 
 			gameData.index ? (gameData.index = 0) : (gameData.index = 1);
 			game.innerHTML += `<p>Sorry, one of your rolls was a one, switching to  ${
@@ -99,7 +103,7 @@
 			setTimeout(setUpTurn, 2000);
 		}
 
-		// if neither die is a 1...
+		//// if neither die is a 1...
 		else { 
 			gameData.score[gameData.index] = gameData.score[gameData.index] + gameData.rollSum;
 
@@ -114,7 +118,7 @@
 			});
 
 			document.getElementById('pass').addEventListener('click', function () {
-				pass.play();
+				pass.play();	
 				gameData.index ? (gameData.index = 0) : (gameData.index = 1);
 				setUpTurn();
 			});
@@ -123,6 +127,7 @@
 			dice.play();
 			
 		}
+		// showCurrentScore();
 		dice.play();
 
 	}
@@ -139,7 +144,7 @@
 			document.getElementById('congrats').className = "showing";
 		
 			//hide score & rolling ability
-			document.querySelector('.split').className = 'hidden';
+			document.querySelector('div #left').className = 'hidden';
 			
 			//display flex the scoreboard congrats message & the img in html
 			document.querySelector('#scoreboard').className = 'split2'; 
@@ -168,14 +173,16 @@
 	///SCOREBOARD
 	function showCurrentScore() {//SCORE TEXT
 		document.querySelector('#score').className = 'split2'; 
-		p1.innerHTML = `<p>${gameData.players[0]} : <span style="font-size:200%;">${gameData.score[0]}</span> </p>`;
-		p2.innerHTML = ` <p> ${gameData.players[1]}: <span style="font-size:200%;">${gameData.score[1]}</span> </p>`;
+		p1.innerHTML = `<p> <span style="font-size:50%;">${gameData.players[0]} : </span> <span style="font-size:200%;">${gameData.score[0]}</span> </p>`;
+
+
+		p2.innerHTML = ` <p> <span style="font-size:50%;">${gameData.players[1]}: </span> <span style="font-size:200%;">${gameData.score[1]}</span> </p>`;
 
 		document.querySelector('#scoreboard #player1').className = "showing";
 		document.querySelector('#scoreboard #player2').className = "showing";
 
-		document.querySelector('#scoreboard #score1').className = "split";
-		document.querySelector('#scoreboard #score2').className = "split";		
+		document.querySelector('#scoreboard #score1').className = "scoresFlex";
+		document.querySelector('#scoreboard #score2').className = "scoresFlex";		
 	}
 
 
@@ -185,7 +192,7 @@
 	 close.addEventListener('click', function () {
 		 document.getElementById('overlay1').className="hidden";//rules overlay hides
 		 document.querySelector('#rules').className = "showing";//button shows
-		 document.querySelector('#yes').className = "showing";//when close yes div shows 
+		 document.querySelector('#start').className = "showing";//when close start div shows 
 		 console.log('close');
 	 });
 
@@ -195,7 +202,7 @@
 		 document.getElementById('overlay1').className="showing";//overlay hides
 		 document.querySelector('#rules').className = "hidden";//rules show
 
-		 document.querySelector('#yes').className = "hidden";//gamecontrol shows
+		 document.querySelector('#start').className = "hidden";//hide start 
 	 });
 
 
