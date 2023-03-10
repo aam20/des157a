@@ -255,6 +255,8 @@ footer p {
     background-color: #607E26;
     color:#fff;
     border-radius:40px;
+    padding-bottom:0;
+    padding-top:0;
 }
 
 #congrats {
@@ -310,6 +312,8 @@ a:hover {
 /*so mice are next to scores*/
 .scoresFlex {
     display:flex;
+    padding-bottom:0;
+    padding-top:0;
 }
 
 /******************MEDIA QUERY******************/
