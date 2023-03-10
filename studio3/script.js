@@ -186,7 +186,7 @@
 	}
 
 
-	// TO OPEN OVERLAY WITH RULES
+	// TO OPEN OVERLAY WITH RULES BUTTON
 	 /*to close/hide overlay(s)*/
 	 const close = document.querySelector('.close'); 
 	 close.addEventListener('click', function () {

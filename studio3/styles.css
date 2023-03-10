@@ -276,11 +276,6 @@ footer p {
     margin:auto;
 }
 
-.split3 {
-    display:flex;
-    max-width:80%
-}
-
 /* LINKs */
 .link a{
     color:#b8db74;
@@ -312,7 +307,7 @@ a:hover {
 }
 
 /*flex contents of score*/
-/*so mouse are next to scores*/
+/*so mice are next to scores*/
 .scoresFlex {
     display:flex;
 }
@@ -341,7 +336,6 @@ a:hover {
 
     .split2 {
         display: flex;
-        /* flex:1; */
         margin:auto;
     }
 
@@ -388,7 +382,6 @@ a:hover {
     }
 
    section div.split {
-        /* margin-left:5%; */
         margin:auto;
     }
     
