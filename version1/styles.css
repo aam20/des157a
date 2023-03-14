@@ -53,12 +53,12 @@ h1 {
     overflow-x:scroll;
     /* width:100vw; */
     display: flex; 
+    background-color:#4e1c2975;
 }
 
 #contain {
     min-width:20%;
 }
-
 
 #slider img {
     margin:auto;
@@ -251,10 +251,15 @@ div #sheet {
         width:3.2%;;
     }
 
+     /*VERTICAL SCROLL & BOUNDARIES*/
     #slider {
         overflow-y:scroll;
         display: flex; 
         flex-direction: column;
+        height:25%; ;/*USED to be 65vh*/
+        width:25vw;
+        padding-top:0;
+        background-color:#4e1c2975;
     }
 
     #separate {
@@ -263,19 +268,9 @@ div #sheet {
         /* margin-left:5% */
     }
 
-    div#section.hidden {
+    /* div#section.hidden {
         display:none;
-    }
-    /*VERTICAL SCROLL & BOUNDARIES*/
-    section #slider {
-        /* overflow-x:scroll; */
-        display: flex; 
-        overflow-y: scroll;
-        height:25%; ;/*USED to be 65vh*/
-        width:25vw;
-        padding-top:0;
-        background-color:#4e1c2975;
-    }
+    } */
 
     #slider img {
         margin:auto;
@@ -362,4 +357,4 @@ div #sheet {
         top:-60%;
     }
     
-}/*********END media query*********/
+} /*********END media query*********/
