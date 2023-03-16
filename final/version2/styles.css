@@ -1,0 +1,412 @@
+body {
+    margin: 0;
+    padding: 0;
+    /* margin-top:10px; */
+    text-align: center;
+    font-family: 'Mali', cursive;
+    background: rgb(78,28,41);
+    background: linear-gradient(180deg, rgba(78,28,41,1) 0%, rgba(250,234,222,1) 5%);    
+    
+}
+
+/*HEADER*/
+header {
+    /* margin-top: 40px; */
+    font-family: 'Emilys Candy', cursive;
+    font-size: x-large;
+    color:#4E1C29;
+    animation:float infinite ease-in-out 3.5s;
+}
+
+#curtain {
+    width: 100%;
+}
+
+#moon {/*LOGO*/
+    width:7%;;
+}
+
+header p {
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+@keyframes float { 
+    0% {
+        transform: translate(0,0);
+    }
+
+    50%{
+        transform: translate(0,10px);
+    }
+
+    100% {
+        transform: translate(0,0);
+    }
+}
+
+h1 {
+    font-size: 300%;
+    margin-top:0;
+    margin-bottom:3%;
+}
+
+/**SLIDER**/
+#slider {
+    position: relative;
+    top:0;
+    left: 0;
+    height: 100%;
+    overflow-x:scroll;
+    /* width:100vw; */
+    display: flex; 
+    background-color:#4e1c2975;
+}
+
+#contain {
+    min-width:20%;
+}
+
+#slider img {
+    margin:auto;
+    height: 70%;
+    width:70%; /*added*/
+    display: block;
+    margin-top:20px;
+    transform: scale(0.93);
+    transition: all 1s ease-in;
+}
+
+#slider img:hover {
+    transform: scale(1.0);
+    transition: all 1s ease-in-out;
+    /* filter: blur(3px); */
+}
+
+/********OVERLAY********/
+.showing {
+    display: block;
+    opacity: 100%;
+}
+
+.show {
+    display: block;
+    opacity: 100%;
+}
+
+.hidden {
+    opacity:0%;
+    display:none;
+}
+
+#overlay1 {
+    position: relative;
+    top: 30%; 
+    /* top: -10%;  */
+    /* left:15%; */
+    margin:auto;
+    width: 70vw;
+    background-color:#faeade;
+    /*border-color:#b44361;*/
+    border-color:#A28081;
+    border-style:solid;
+    border-width: 10px;;
+    border-radius: 40px;
+    padding-top:20px;
+    padding-bottom:20px;
+}
+
+#overlay1 h2 {
+    font-family: 'Emilys Candy', cursive;
+    color:#4E1C29;
+    font-size: 200%;
+    text-align: left;
+    padding-left:5%;
+}
+
+#overlay1 p {
+    text-align: left;
+    padding-left:5%;
+    padding-right:5%;
+    font-size: 120%;
+}
+
+/*IMG ID for sink image in overlay*/
+#myImage{
+    max-width:80%; /*used to be 90%*/
+}
+
+/*iMG class for all other images*/
+.myImage{
+    max-width:80%; /*to decrease size of images*/
+}
+
+
+
+/*FOOTER*/
+footer{
+    background-color:#4e1c29d3;
+    color: white;
+    max-width: 1200px;
+    margin:auto;
+    padding-top: 2%;
+    padding-bottom: 4%;;
+    margin-top: 7%;
+    text-align: left;
+    line-height:1.6em;
+    border-radius: 40px;
+    border-bottom-right-radius:0;
+    border-bottom-left-radius:0;
+    margin-top: 10%;
+}
+
+footer a {
+    /* color: #C26761; */
+    color:#ca9fa0;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color:#faeade;
+}
+
+footer p {
+    margin:auto;
+    width:80%;
+}
+
+/*CLOSING X*/
+.close {
+    display:block;
+    float: right;
+    color: #faeade;
+    border-radius: 50px;
+    border:none;
+    width: 45px;
+    height: 45px;
+    position:relative;
+    z-index: 2; /*bring x forward to be able to close in mobile*/
+    right:4%;
+    font-size: 190%;
+    background-color:#4E1C29;
+    display: block;
+    font-family: 'Mali', cursive; 
+}
+
+.close:hover {
+    color:#4E1C29;
+    background-color: #faeade;
+    border: solid 3px #4E1C29;
+}
+
+/* div#sheet {
+    background-color: aqua;
+} */
+
+.row {
+    display:flex;
+}
+section #sheet {
+    /* max-width:100%; */
+    max-width:50vw;
+}
+
+/*padding in between parts of the sheet*/
+section .row img {
+    padding:7%;
+    min-width:15vw; /**CHANGE SIZE OF SHEET OVERALL*/
+    background-color: #FFF;
+    border:#4E1C29 4px double; 
+    /* BORDER AROUND EACH CARD */
+    /*filter: blur(3px); blur of each part of the sheet*/
+    /* filter:grayscale(80%); */
+}
+
+section .row img:hover {
+    filter: none;
+}
+
+section .row img:last-child {
+    padding-right:7%;
+}
+
+div #sheet {
+    width:50%;
+    margin-left:4%; /*used to be 5%*/
+}
+
+.here {
+    display:none;
+    opacity:100%;
+}
+
+.random {
+    margin-right:40%;
+    position:relative;
+    margin-bottom:3%;
+}
+
+.cardScale { /* add one random is decided*/
+    transform: scale(1.0);
+    transition: all 1s ease-in;
+} 
+
+.random a{
+    background-color:#4E1C29;
+    color:#faeade;
+    border-radius: 40px;
+    text-decoration: none;
+    padding:2%;
+    margin-bottom: 20px;
+    border:2px solid #4E1C29;
+    font-size:130%;
+}
+
+.random a:hover{
+    color:#4E1C29;
+    background-color:#faeade;
+    border:2px solid #4E1C29;
+}
+
+
+
+
+/******************MEDIA QUERY******************/
+/*****DESKTOP*****/
+@media only screen and (min-width: 800px)
+{
+
+    /* #separate section {
+        height:contain;
+    } */
+    .here {
+        display:flex;
+        opacity:100%;
+    }
+
+    body {
+        background: rgb(78,28,41);
+        background: linear-gradient(180deg, rgba(78,28,41,1) 0%, rgba(250,234,222,1) 7%);/*uSed to be 24%*/   
+    }
+
+    #curtain {
+        width: 80%;
+    }
+
+    #moon { /*LOGO*/
+        width:3.2%;;
+    }
+
+     /*VERTICAL SCROLL & BOUNDARIES*/
+    #slider {
+        overflow-y:scroll;
+        display: flex; 
+        flex-direction: column;
+        max-height: 50vh; /*used to be 80*/
+        /* height:50vh;  */
+        /*USED to be 65vh*/
+        /* width:25vw; */
+        /* width:50%; */
+        padding-top:0;
+        background-color:#4e1c2975;
+        padding-bottom:0;
+        margin-bottom:0;
+        margin-left:5%;
+    }
+
+    #separate {
+        display:flex;
+        /* border: dashed 2px #4E1C29; */
+        /* margin-left:5% */
+    }
+
+    #slider img {
+        margin:auto;
+        /* height: 70%; */
+        width:50%; /*used to be 20% --- small cards*/
+        display: block;
+        margin-top:20px;
+        transform: scale(0.93);
+        transition: all 2.5s ease-in;
+    }
+
+    /*IMG ID for image in overlay*/
+    #myImage{
+        max-width:80%;
+        border-radius:40px;
+    }
+
+    /*an ID is called flex TO FLEX IMAG & INFO OF OVERLAY*/
+    .flex {
+        top: 20%; 
+        display:flex;
+        opacity:0%;
+        display:none;
+    }
+
+    /*div that holds image of sink*/
+    div#sinkImg{
+        padding:0;
+        margin:0;
+        /* min-width:0; */
+        max-width:60%;
+    }
+
+    /*id for sink image*/
+    #myImage {
+        max-width:80%;
+        border-radius:0;
+    }
+
+    /*overlay*/
+    #overlay1 p {
+        padding-left:0;
+    }
+
+    #overlay1 h2 {
+        padding-left:0;
+    }
+
+    /*IMG IN OVERLAY*/
+    .containImg img{
+        max-width:80%;
+    }
+
+    #containImg{
+        flex:1;
+    }
+
+    article {
+        flex:1;
+    }
+    
+     /* FOOTER */
+     footer {
+        display: flex;
+        padding:0;
+        text-align:center;
+        padding-bottom:2%;
+        padding-top:2%;
+        min-width:80%;
+        padding-left:7%;
+    }
+
+    footer p {
+        flex:1;
+    }
+
+    .showing {
+        display: flex;
+        opacity: 100%;
+    }
+
+    #overlay1 {
+        position: relative;
+        top:-60%;
+    }
+    
+    div#separate.hidden {
+        display:none; /*remove main part from visibility & adding spacing before the overlay*/
+    }
+
+} /*********END media query*********/
