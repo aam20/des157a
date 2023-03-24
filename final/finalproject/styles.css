@@ -60,7 +60,8 @@ h2 {
     color:#4E1C29;
     text-align:left;
     /* background-color:#D8995F; */
-    background-color:#efa55fb3;
+    background-color:#f4c192b3;
+    border:solid #efa55fb3;
     border-radius:20px;
     margin-left:2%;
     margin-right:2%;
@@ -72,7 +73,7 @@ h2 {
 }
 
 #instructions p{
-    font-size:150%;
+    font-size:130%;
 }
 /* end of instructions */
 
@@ -273,12 +274,12 @@ div #sheet {
     z-index:1;
 }
 
-#rCard {
+#rCard { /*random card is stated*/
     color:#4E1C29;
     font-family: 'Emilys Candy', cursive;
     font-size:200%;
     margin-top:0;
-    margin-top:2%;
+    margin-top:4%;
     margin-bottom:0;
 }
 
@@ -338,7 +339,7 @@ div #sheet {
     }
 
     #instructions p{
-        font-size:150%;
+        font-size:130%;
     }
 
      /*VERTICAL SCROLL & BOUNDARIES*/
