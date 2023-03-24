@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <!-- NORMALIZE SCRIPT -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <!--GOOGLE FONTS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Emilys+Candy&family=Mali&display=swap" rel="stylesheet">
+    
+    <title>LUNA's Lotería</title>
+
+    <!--SCRIPT-->
+    <script src="script.js" defer></script>
+    <!--STYLESHEET-->
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <img id="curtain" src="images/curtain.png" alt="curtain of handing moons and stars">
+    <header>
+        <h1>
+             LUNA's Lotería <img id="moon" src="images/moon.png" alt="moon logo">
+        </h1>
+        
+    </header>
+
+    <main>
+        <div id="separate">
+            <div id="instructions">
+                <h2>Instructions:</h2>
+                <p> click on the random button & click on the random card to know about Luna</p>
+                <p>keep clicking on the random card until the sheet is full with color</p>
+                    
+            </div>
+            <section>
+                <div id="slider">
+                    <img src="images/crd1.png" alt="slide of luna in a sink" id="one">
+                    <img src="images/crd2.png" alt="slide of luna in a bag" id="two">
+                    <img src="images/crd3.png" alt="slide of luna by the sliding door" id="three">
+                    <img src="images/crd4.png" alt="slide of luna yawning" id="four">
+                    <img src="images/crd5.png" alt="slide of luna in her bed" id="five">
+                    <img src="images/crd6.png" alt="slide of luna by the blinds" id="six">
+                    <img src="images/crd7.png" alt="slide of luna's paws" id="seven">
+                    <img src="images/crd8.png" alt="slide of luna's surprise" id="eight">
+                    <img src="images/crd9.png" alt="slide of luna staring" id="nine">
+                    <img src="images/crd10.png" alt="slide of luna's side face" id="ten">
+                    <img src="images/crd11.png" alt="slide of luna with a plant" id="eleven">
+                    <img src="images/crd12.png" alt="slide of luna with a brush" id="twelve">
+
+                </div>
+                <span class="random"> <a href="" class="selected">RANDOM!</a></span>
+                <p id="rCard"></p>
+            </section>
+
+            <section>
+                <div id="sheet">
+                    <div class="row">
+                        <img src="images/crd1.png" alt="slide of luna in a sink" id="cc1">
+                        <img src="images/crd2.png" alt="slide of luna in a bag" id="cc2">
+                        <img src="images/crd3.png" alt="slide of luna by the sliding door" id="cc3">
+                        <img src="images/crd4.png" alt="slide of luna yawning" id="cc4">
+                    </div>
+
+                    <div class="row"> 
+                        <img src="images/crd5.png" alt="slide of luna in her bed" id="cc5">
+                        <img src="images/crd6.png" alt="slide of luna by the blinds" id="cc6">
+                        <img src="images/crd7.png" alt="slide of luna's paws" id="cc7">
+                        <img src="images/crd8.png" alt="slide of luna's surprise" id="cc8">
+                    </div>
+                
+                    <div class="row">
+                        <img src="images/crd9.png" alt="slide of luna staring" id="cc9">
+                        <img src="images/crd10.png" alt="slide of luna's side face" id="cc10">
+                        <img src="images/crd11.png" alt="slide of luna with a plant" id="cc11">
+                        <img src="images/crd12.png" alt="slide of luna with a brush" id="cc12">
+                    </div>
+                    
+                </div>
+            </section>
+        </div>
+
+        <section id="overlay1" class="hidden"> <!--INPUT INFO BASED ON CARD-->
+            <button class="close">x</button>
+            
+
+            <!-- info1 -->
+            <div class="flex">
+                <div id="sinkImg">
+                    <img src="images/img1.jpg" alt="luna in a sink" id="myImage">
+                </div>
+
+                <article id="c1">
+                    <h2>THE SINK</h2>
+                    <p>Luna loves sleeping in the sink, especially when its hot and only when its not wet. She likes to mess with the faucet and take long naps with her fluffy tail moving back and forth. If someone disturbs her, she will give a side eye as if saying 'are you serious.</p>
+                </article>
+            </div>
+
+
+            <!-- info2 -->
+            <div class="flex">
+                <div class="containImg">
+                    <img src="images/img2.jpg" alt="luna in a bag" class="myImage">
+                </div>
+                <article id="c2">
+                    <h2>THE BAG</h2>
+                    <p>
+                        This Target bag is one of Luna's favorite places to sleep in and to hide in when she feels playful. The bag is an upgrade from her usual interest in plastic bags. She took ownership of the bag and remanants of her soft hair are always left behind.
+                    </p>
+                </article>
+            </div>
+
+
+            <!-- info3 -->
+            <div class="flex">
+                <div class="containImg">
+                    <img src="images/img3.jpg" alt="luna by the sliding door" class="myImage">
+                </div>
+
+                <article id="c3">
+                    <h2>THE SLIDING DOOR</h2>
+                    <p>
+                        Luna loves to watch the outside through the sliding door. If you can't find her anywhere, she's likely be staring out the sliding door, sometimes observing the cats that roam around the backyard. If not looking outside, she's often hunting for a tiny insect nearby.
+                    </p>
+                </article>
+            </div>
+
+
+            <!-- info4 -->
+            <div class="flex">
+                <div class="containImg">
+                    <img src="images/img4.jpg" alt="luna yawning" class="myImage">
+                </div>
+
+                <article id="c4">
+                    <h2>THE YAWN</h2>
+                    <p>
+                        Luna is rarely caught yawning on camera, but when she does she looks so cute with her small teeth and tongue. She's often cautious of her teeth, especially when you're trying to brush them.
+                    </p>
+                </article>
+            </div>
+
+            <!-- info4 -->
+            <div class="flex">
+                <div class="containImg">
+ 
+                    <img src="images/img5.jpg" alt="luna in her bed" class="myImage">
+
+                </div>
+                <article id="c5">
+                    <h2>THE BED</h2>
+                    <p>
+                        Luna has various beds, but this is a newer one that she tends to sleep in. This picture was caught after covering her with a blanket in the early morning. She had just settled for an early nap and was cuddling with her pillow.";
+                    </p>
+                </article>
+            </div>
+
+
+            <!-- info5 -->
+            <div class="flex">
+                <div class="containImg">
+                    <img src="images/img6.jpg" alt="luna by the blinds" class="myImage">          
+                </div>
+                <article id="c6">
+                    <h2>THE BLINDS</h2>
+                    <p>
+                        The blinds are Luna's number one target when she's bored. She loves to try to play with them to the extent that she has torn strings that make up the blinds. Despite many incidents, she is still persistent with the blinds, especially if she knows no one is nearby.
+                    </p>
+                </article>
+            </div>
+
+            <!-- info6 -->
+            <div class="flex">  
+                <div class="containImg">
+       
+                    <img src="images/img7.jpg" alt="luna's paws" class="myImage">
+                   
+                </div>
+                <article id="c7">
+                    <h2>THE PAWS</h2>
+                    <p>
+                        Luna's paws are always so cute and smol. The way her paws are brown tipped makes them stand out even more. She is oftentimes protective of her paws, but she likes to fold them under her body when she sits down to observe and to take a nap. When she sits down she resembles a very small loaf of bread or a small chicken.
+                    </p>
+                </article>
+            </div>
+
+            <!-- info7 -->
+            <div class="flex">
+                <div class="containImg">
+                    
+                    <img src="images/img8.jpg" alt="luna's surprise" class="myImage">
+                </div>
+                <article id="c8">
+                    <h2>THE SURPRISE</h2>
+                    <p>
+                        This is Luna's face when she's caught by surprise. The picture was taken off guard when she was just standing around. Her face seems taken aback that there is something underneath her face.
+                    </p>
+                </article>
+            </div>
+
+            <!-- info8 -->
+            <div class="flex">
+                <div class="containImg">
+                    <img src="images/img9.jpg" alt="luna staring" class="myImage">
+                </div>
+                <article id="c9" >
+                    <h2>THE STARE</h2>
+                    <p>
+                        Luna always likes to stare at whoever is near her, well mostly the people she knows. If she does't know you, she'll probably hide until you leave. Sometimes she'll appear out of no where though and will be just staring at you, as if waiting for something. Sometimes she stares since she wants to play or just because. It's typically a mystery.
+                    </p>
+                </article>
+            </div>
+
+            <!-- info9 - card 10 -->
+            <div class="flex" >
+                <div class="containImg">
+                    <img src="images/img10.jpg" alt="luna's side face" class="myImage">
+                </div>
+                <article id="c10">
+                    <h2>THE FACE</h2>
+                    <p>
+                        This is Luna's face, specifically her side profile that shows most of her prominent features. Her face in general is very cute with her big boba eyes that change color between green and aquamarine. She loves it when you rub and massage her nose and eye area, as well as her chin. When you rub her chin, you get to see her cute fish-like mouth.
+                    </p>
+                </article>
+            </div>
+
+             <!-- info10 - card 11 -->
+             <div class="flex" >
+                <div class="containImg">
+                    <img src="images/img11.jpg" alt="luna with a plant" class="myImage">
+                </div>
+                <article id="c11">
+                    <h2>THE PLANT</h2>
+                    <p>
+                        Luna is very curious and loves to smell things. She especially loves to smell plants and even bite them. This is a picture of when she was trying to bite a leaf from a bamboo plant on a table. I find it endearing how in the picture her eyes are so big which emphasizes her curiosity and mischief. Luna loves to get on elevated places especially if there are things on top of it.
+                    </p>
+                </article>
+            </div>
+
+             <!-- info11 - card 12 -->
+             <div class="flex" >
+                <div class="containImg">
+                    <img src="images/img12.jpg" alt="luna with a brush" class="myImage">
+                </div>
+                <article id="c12">
+                    <h2>THE BRUSH</h2>
+                    <p>
+                        This is Luna trying to hit and touch her brush. She typically prefers to smell and touch things before she gets a bit more comfortable. For her brush, she does get annoyed sometimes when we place it near her because it's like she knows we're gonna brush her coat. In the picture, she's sort of playing with the brush.
+                    </p>
+                </article>
+            </div>
+        </section>
+   
+
+    </main>
+
+    <footer><!--FOOTER-->
+        <p>By Annamaria Avila Magdaleno</p>
+
+        <p>
+            Contact: 
+            <a href="mailto:avilama@ucdavis.edu">avilama@ucdavis.edu</a>
+        </p>
+
+        <p><a href="https://validator.w3.org/check?uri=https://aam20.github.io/des157a/final/finalproject/index.html">Valid HTML 5</a></p>
+
+        <p><a href="https://jigsaw.w3.org/css-validator/validator?uri=https://aam20.github.io/des157a/final/finalproject/styles.css">Valid CSS </a></p>
+    </footer>
+
+</body>
+</html>
